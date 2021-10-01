@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+if [[ $# != 2 ]]; then
+	echo
+	echo "ln2by: creates a reference" 
+	echo "   - TO something existing      (1st arg),"
+	echo "   - BY a newly created symlink (2nd arg)."
+	echo
+	echo "Example:"
+	echo
+	echo ">ln2by  /foo/bar/my_old_directory/  my_new_shortcut"
+	echo
+	exit 1
+fi
+
+ln -s $1 $2
