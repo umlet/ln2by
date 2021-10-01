@@ -10,3 +10,8 @@ Enter ``ln2by``: it creates a reference
 - BY a newly created symlink (2nd argument).
 
 In addition, ``ln2by`` won't let you overwrite an existing symlink, and it tries to catch the directory-as-2nd-argument calamity.
+
+Example:
+```
+bla
+```
