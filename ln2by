@@ -15,4 +15,22 @@ if [[ $# != 2 ]]; then
 	exit 1
 fi
 
-ln -s $1 $2
+
+THE_EXISTING_THING=$1
+A_NEW_SYMLINK_TO_THE_EXISTING_THING=$2
+
+
+eecho() { echo "$*" 1>&2; }
+
+if [[ -L ${A_NEW_SYMLINK_TO_THE_EXISTING_THING} ]]; then
+	eecho "ERROR: symlink '${A_NEW_SYMLINK_TO_THE_EXISTING_THING}' already exists; remove/unlink first."
+	exit 90
+fi
+if [[ -d ${A_NEW_SYMLINK_TO_THE_EXISTING_THING} ]]; then
+	eecho "ERROR: '${A_NEW_SYMLINK_TO_THE_EXISTING_THING}' already exists as a directory. Are you trying to use the ludicrous '(3rd form)' of 'ln'? Ts ts."
+	exit 90
+fi
+# If 2nd argument is an existing file, 'ln' already catches the problem.
+
+
+ln -s ${THE_EXISTING_THING} ${A_NEW_SYMLINK_TO_THE_EXISTING_THING}
