@@ -2,7 +2,7 @@
 
 if [[ $# != 2 ]]; then
 	echo
-	echo "ln2by: creates a reference" 
+	echo "ln2by:  creates a reference" 
 	echo "   - TO something existing      (1st arg),"
 	echo "   - BY a newly created symlink (2nd arg)."
 	echo
@@ -10,6 +10,8 @@ if [[ $# != 2 ]]; then
 	echo
 	echo ">ln2by  /foo/bar/my_old_directory/  my_new_shortcut"
 	echo
+	echo
+	echo "[v1.0.0   Oct 2021   github.com/umlet/ln2by   Martin Auer]"
 	exit 1
 fi
 
