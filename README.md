@@ -1,5 +1,5 @@
 # ln2by
-Creating a symlink has never been that much fun!
+Creating a symlink has never been so much fun!
 
 By Zeus, I won't recall the argument order for creating a symlink with ``ln``.
 
